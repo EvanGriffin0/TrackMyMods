@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'add-modification',
     loadChildren: () => import('./add-modification/add-modification.module').then( m => m.AddModificationPageModule)
   },
+  {
+    path: 'track-map',
+    loadChildren: () => import('./track-map/track-map.module').then( m => m.TrackMapPageModule)
+  },
 ];
 
 @NgModule({
