@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My Modifications</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding *ngFor="let mod of modifications">
+      <ion-item>
+        <ion-label>
+          <h2>{{ mod.vehicle }}</h2>
+          <p>{{ mod.description }}</p>
+          <p>{{ mod.cost | currency }}</p>
+          <p>{{ mod.date | date:'short' }}</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger">
+          Delete
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+  <ion-button expand="full" routerLink="/add-modification">Add New Mod</ion-button>
+  <ion-button expand="full" routerLink="/track-map">Find Tracks</ion-button>
+</ion-content>
